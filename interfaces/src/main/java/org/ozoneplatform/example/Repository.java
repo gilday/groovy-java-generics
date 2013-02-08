@@ -1,4 +1,10 @@
 package org.ozoneplatform.example;
 
-interface Repository<T> extends RepositoryWithId<T, Integer> {
+import java.util.List;
+
+interface Repository<T> {
+
+    T getById(Integer id);
+
+    List<T> findAll();
 }
